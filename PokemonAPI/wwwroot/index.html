@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex Viewer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="hero-panel">
+            <div class="hero-copy-block">
+                <p class="eyebrow">Pokemon Browser</p>
+                <h1>Find Pokemon data from your API in a clean, simple view.</h1>
+                <p class="hero-copy">
+                    Search by ID, name, or type, and browse the saved records from your database.
+                </p>
+                <div class="mode-toggle" role="tablist" aria-label="Data source">
+                    <button type="button" id="db-mode" class="mode-button mode-button-active">Database</button>
+                    <button type="button" id="live-mode" class="mode-button">Live API</button>
+                </div>
+                <div class="hero-actions">
+                    <button type="button" id="load-all" class="primary-button">Load All Pokemon</button>
+                    <p class="micro-copy" id="mode-description">Database mode supports full list, ID, name, and type search.</p>
+                </div>
+            </div>
+            <div class="hero-metrics">
+                <div class="metric-card">
+                    <p class="status-label">Status</p>
+                    <p id="status-message">Ready to load Pokemon from the database.</p>
+                </div>
+                <div class="metric-card">
+                    <p class="status-label">Showing</p>
+                    <p id="result-count">0 Pokemon</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-deck">
+            <form id="id-form" class="search-card">
+                <p class="search-title">Search by ID</p>
+                <label class="field-group">
+                    <span>Pokemon number</span>
+                    <input id="pokemon-id" type="number" min="1" placeholder="1, 25, 150">
+                </label>
+                <button type="submit" class="primary-button">Find Pokemon</button>
+            </form>
+
+            <form id="name-form" class="search-card">
+                <p class="search-title">Search by Name</p>
+                <label class="field-group">
+                    <span>Name or part of a name</span>
+                    <input id="pokemon-name" type="text" placeholder="pikachu, saur, char">
+                </label>
+                <button type="submit" class="primary-button">Search Name</button>
+            </form>
+
+            <form id="type-form" class="search-card">
+                <p class="search-title">Search by Type</p>
+                <label class="field-group">
+                    <span>Pokemon type</span>
+                    <input id="pokemon-type" type="text" placeholder="grass, fire, water">
+                </label>
+                <button type="submit" class="primary-button">Filter Type</button>
+            </form>
+        </section>
+
+        <section class="results-panel">
+            <div class="results-heading">
+                <p class="results-kicker">Results</p>
+                <h2>Pokemon List</h2>
+            </div>
+            <div id="pokemon-grid" class="pokemon-grid"></div>
+        </section>
+    </main>
+
+    <template id="pokemon-card-template">
+        <article class="pokemon-card">
+            <div class="card-top">
+                <div>
+                    <p class="pokemon-number"></p>
+                    <p class="pokemon-name"></p>
+                </div>
+                <p class="pokemon-badge"></p>
+            </div>
+            <div class="chip-row pokemon-types"></div>
+            <dl class="pokemon-stats">
+                <div>
+                    <dt>Height</dt>
+                    <dd class="pokemon-height"></dd>
+                </div>
+                <div>
+                    <dt>Weight</dt>
+                    <dd class="pokemon-weight"></dd>
+                </div>
+                <div class="full-row">
+                    <dt>Abilities</dt>
+                    <dd class="pokemon-abilities"></dd>
+                </div>
+            </dl>
+        </article>
+    </template>
+
+    <script src="app.js"></script>
+</body>
+</html>

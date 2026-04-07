@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonIngestion", "PokemonIngestion\PokemonIngestion.csproj", "{E3006B72-ED5A-67BF-E01A-452DD6611459}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3006B72-ED5A-67BF-E01A-452DD6611459}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3006B72-ED5A-67BF-E01A-452DD6611459}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3006B72-ED5A-67BF-E01A-452DD6611459}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3006B72-ED5A-67BF-E01A-452DD6611459}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F8CA420-15DF-40A2-BCBD-D52C5CD647B9}
+	EndGlobalSection
+EndGlobal
