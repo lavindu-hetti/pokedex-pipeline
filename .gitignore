@@ -1,0 +1,25 @@
+## .NET build artifacts
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+
+## dotnet CLI home (auto-generated)
+.dotnet-cli-home/
+.dotnet-home/
+
+## Visual Studio
+.vs/
+*.user
+*.suo
+
+## Rider / JetBrains
+.idea/
+
+## User-specific settings
+launchSettings.json
+
+## OS
+.DS_Store
+Thumbs.db
